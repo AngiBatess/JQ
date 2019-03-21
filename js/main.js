@@ -5,13 +5,13 @@ function main(){
   $('.bio').hide().fadeIn(2000)
   $('.items').hide()
 
-  $('.button').on('click', function(){
+  $('.button').on('click', function(event){
     //$('.items').slideToggle(300)
     //$('.button').toggleClass('active')
     //$('.button').text('Viewed')
 //this makes it so only one is showing at a time when you click on it
-    $(this).toggleClass('active')
-    $(this).text('Viewed')
+    $(event.currentTarget).toggleClass('active')
+    //$(this).text('Viewed')
     $(this).next().slideToggle(300)
   })
 }
@@ -20,5 +20,5 @@ function main(){
 
 
 
-//make sure you include the link in the html and then add the ready 
+//make sure you include the link in the html and then add the ready
 $(document).ready(main)
