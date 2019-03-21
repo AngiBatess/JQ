@@ -4,15 +4,15 @@ function main(){
 //you can chain lines of code together in jquery
   $('.bio').hide().fadeIn(2000)
   $('.items').hide()
-
-  $('.button').on('click', function(event){
+//the shortcut for the word function is =>
+  $('.button').on('click', event => {
     //$('.items').slideToggle(300)
     //$('.button').toggleClass('active')
     //$('.button').text('Viewed')
 //this makes it so only one is showing at a time when you click on it
     $(event.currentTarget).toggleClass('active')
     //$(this).text('Viewed')
-    $(this).next().slideToggle(300)
+    $(event.currentTarget).next().slideToggle(300)
   })
 }
 
