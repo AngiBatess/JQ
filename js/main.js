@@ -14,6 +14,7 @@ function main(){
     //$(this).text('Viewed')
     $(event.currentTarget).next().slideToggle(300)
   })
+  //if you want to use the old function() then you can use $(this)
 }
 
 
